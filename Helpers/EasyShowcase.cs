@@ -16,4 +16,10 @@ public class EasyShowcase {
     /// <typeparam name="T"></typeparam>
     /// <param name="t"></param>
     public static void GetA<T>(out T t) => t = default!;
+    /// <summary>
+    /// 用于消耗掉一个值
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="t"></param>
+    public static void Use<T>(T t) => _ = t;
 }
