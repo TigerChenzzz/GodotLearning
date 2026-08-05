@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5gd5c3x31seh" path="res://Learning/Render/LearningDrawableTexture/LearningDrawableTextureShowcase.cs" id="1_m41i1"]
 
-[node name="Root" type="Node2D" unique_id=1122934197]
+[node name="LearningDrawableTextureScene" type="Node2D" unique_id=1122934197]
 script = ExtResource("1_m41i1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=741272117]

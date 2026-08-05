@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://daaj7rvdbhqrk"]
+
+[ext_resource type="Script" uid="uid://d4l38d7ukfxoa" path="res://Learning/Render/LearningRenderingServer/LearningRenderingServerShowcase.cs" id="1_61uji"]
+[ext_resource type="Texture2D" uid="uid://757f345j4ukb" path="res://icon.svg" id="2_xmcg5"]
+
+[node name="LearningRenderingServerScene" type="Node2D" unique_id=221630006]
+script = ExtResource("1_61uji")
+transform = Transform2D(1, 0, 0, 1, -100, -100)
+texture = ExtResource("2_xmcg5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=755728316]
