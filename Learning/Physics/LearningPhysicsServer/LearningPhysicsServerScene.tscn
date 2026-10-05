@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://by6se8xmob7w5"]
+
+[ext_resource type="Script" uid="uid://d2yscrume4yjg" path="res://Learning/Physics/LearningPhysicsServer/LearningPhysicsServerShowcase.cs" id="1_xprwi"]
+[ext_resource type="Script" uid="uid://b8bowdtqy3e5b" path="res://Learning/Physics/LearningPhysicsServer/SceneScripts/Player.cs" id="2_tk70g"]
+[ext_resource type="Texture2D" uid="uid://757f345j4ukb" path="res://icon.svg" id="3_atuke"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5lg7"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xprwi"]
+size = Vector2(100, 100)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e2a01"]
+size = Vector2(100, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlgux"]
+size = Vector2(2000, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xprwi"]
+size = Vector2(2000, 20)
+
+[node name="LearningPhysicsServerScene" type="Node2D" unique_id=714486205 node_paths=PackedStringArray("_player")]
+script = ExtResource("1_xprwi")
+_player = NodePath("Player")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=733926686]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Player" type="RigidBody2D" parent="." unique_id=1229801919]
+position = Vector2(-323, -111)
+gravity_scale = 0.0
+script = ExtResource("2_tk70g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1478651164]
+shape = SubResource("RectangleShape2D_o5lg7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=687153274]
+texture = ExtResource("3_atuke")
+
+[node name="Block" type="RigidBody2D" parent="." unique_id=1190709083]
+position = Vector2(120, 0)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block" unique_id=2019928503]
+shape = SubResource("RectangleShape2D_xprwi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Block" unique_id=489635959]
+texture = SubResource("PlaceholderTexture2D_e2a01")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1889964173]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=1176268188]
+shape = SubResource("RectangleShape2D_wlgux")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall" unique_id=884352149]
+texture = SubResource("PlaceholderTexture2D_xprwi")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=301570545]
+position = Vector2(0, -500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=2098396217]
+shape = SubResource("RectangleShape2D_wlgux")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall2" unique_id=1788034355]
+texture = SubResource("PlaceholderTexture2D_xprwi")
+
+[node name="Wall3" type="StaticBody2D" parent="." unique_id=673356902]
+position = Vector2(800, 0)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" unique_id=1602988243]
+shape = SubResource("RectangleShape2D_wlgux")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall3" unique_id=1172702536]
+texture = SubResource("PlaceholderTexture2D_xprwi")
+
+[node name="Wall4" type="StaticBody2D" parent="." unique_id=1298132331]
+position = Vector2(-800, 0)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4" unique_id=1716684409]
+shape = SubResource("RectangleShape2D_wlgux")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall4" unique_id=1243514438]
+texture = SubResource("PlaceholderTexture2D_xprwi")
