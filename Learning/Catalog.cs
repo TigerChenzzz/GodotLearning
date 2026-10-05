@@ -10,6 +10,7 @@ public class Catalog {
     };
 
     public static Dictionary<string, Type> PhysicsCatogory { get; } = new() {
+        ["LayerMask"] = typeof(Physics.LearningCollisionLayerMask.LearningCollisionLayerMaskNote),
         ["PhysicsServer"] = typeof(Physics.LearningPhysicsServer.LearningPhysicsServerNote),
     };
 
